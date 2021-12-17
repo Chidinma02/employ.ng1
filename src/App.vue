@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <headerapp />
+
+    <router-view />
+    <!-- <div class="uzor-links">
+      <ul>
+        <li class="link"><router-link to="/">Home</router-link></li>
+        <li class="link"><router-link to="/findjob">FindJob</router-link></li>
+      </ul>
+    </div> -->
+    <footerapp />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import headerapp from "./components/headerapp.vue";
+// import bodyhome from './components/bodyhome.vue'
+import footerapp from "./components/footerapp.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    headerapp,
+    footerapp,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.uzor-links {
+  height: 30vh;
+  color: black;
+}
+
+.link {
+  color: red;
 }
 </style>
